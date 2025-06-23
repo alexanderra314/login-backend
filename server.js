@@ -19,13 +19,13 @@ mongoose.connect(process.env.MONGO_URI)
 
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '../Frontend/public')));
+// app.use(express.static(path.join(__dirname, '../Frontend/public')));
 
 app.use('/api', authRoutes);
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Frontend/views/index.html'));
-});
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../Frontend/views/index.html'));
+// });
 
 
 const PORT = process.env.PORT || 3000;
